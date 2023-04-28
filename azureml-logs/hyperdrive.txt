@@ -1,0 +1,35 @@
+[2023-04-28T04:23:03.663706][GENERATOR][INFO]Trying to sample '4' jobs from the hyperparameter space
+[2023-04-28T04:23:04.0341609Z][SCHEDULER][INFO]Scheduling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_0' 
+[2023-04-28T04:23:04.1922580Z][SCHEDULER][INFO]Scheduling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_1' 
+[2023-04-28T04:23:04.2429365Z][SCHEDULER][INFO]Scheduling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_2' 
+[2023-04-28T04:23:04.278490][GENERATOR][INFO]Successfully sampled '4' jobs, they will soon be submitted to the execution target.
+[2023-04-28T04:23:04.3411920Z][SCHEDULER][INFO]Scheduling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_3' 
+[2023-04-28T04:23:04.5331756Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_0' 
+[2023-04-28T04:23:04.5497188Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_2' 
+[2023-04-28T04:23:04.5833601Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_3' 
+[2023-04-28T04:23:04.5487618Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_1' 
+[2023-04-28T04:42:04.180837][GENERATOR][INFO]Trying to sample '3' jobs from the hyperparameter space
+[2023-04-28T04:42:04.5119382Z][SCHEDULER][INFO]Scheduling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_4' 
+[2023-04-28T04:42:04.6507712Z][SCHEDULER][INFO]Scheduling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_5' 
+[2023-04-28T04:42:04.627082][GENERATOR][INFO]Successfully sampled '3' jobs, they will soon be submitted to the execution target.
+[2023-04-28T04:42:04.7264983Z][SCHEDULER][INFO]Scheduling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_6' 
+[2023-04-28T04:42:04.9259473Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_4' 
+[2023-04-28T04:42:05.0118118Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_5' 
+[2023-04-28T04:42:04.9954267Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_6' 
+[2023-04-28T04:42:34.216657][GENERATOR][INFO]Trying to sample '1' jobs from the hyperparameter space
+[2023-04-28T04:42:34.463519][GENERATOR][INFO]Successfully sampled '1' jobs, they will soon be submitted to the execution target.
+[2023-04-28T04:42:34.6435230Z][SCHEDULER][INFO]Scheduling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_7' 
+[2023-04-28T04:42:34.8800763Z][SCHEDULER][INFO]Successfully scheduled a job. Id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_7' 
+[2023-04-28T04:42:38.316301][CONTROLLER][INFO]Experiment has been marked for cancellation.
+[2023-04-28T04:42:38.316385][CONTROLLER][WARNING][HDFlowDebug]The first 4 jobs have failed due to usererror. The system is cancelling the further child runs and failing the experiment. Please resolve the issues before resubmitting the experiment.
+[2023-04-28T04:42:56.9977792Z][SCHEDULER][INFO]Cancelling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_4' 
+[2023-04-28T04:42:56.9982311Z][SCHEDULER][INFO]Cancelling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_5' 
+[2023-04-28T04:42:56.9987837Z][SCHEDULER][INFO]Cancelling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_6' 
+[2023-04-28T04:42:56.9991178Z][SCHEDULER][INFO]Cancelling job, id='HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_7' 
+[2023-04-28T04:42:57.5769574Z][SCHEDULER][INFO]Updating job statuses to cancelled: [(job id = 'HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_4', previous status = 'RUNNING'), (job id = 'HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_5', previous status = 'RUNNING'), (job id = 'HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_6', previous status = 'RUNNING'), (job id = 'HD_8b22c5a7-3043-4702-8c83-9d091bd7ac87_7', previous status = 'RUNNING')] 
+[2023-04-28T04:43:39.177960][CONTROLLER][WARNING]Marking the experiment for user error because initial child jobs have failed due to user error
+[2023-04-28T04:43:39.295543][CONTROLLER][WARNING]Marking the experiment for user error because initial child jobs have failed due to user error
+[2023-04-28T04:43:39.295482][CONTROLLER][INFO]Experiment has been marked for failure.
+[2023-04-28T04:43:39.464295][CONTROLLER][INFO]Experiment has been marked for failure.
+[2023-04-28T04:43:39.464341][CONTROLLER][WARNING]User errors were found in at least one of the child runs.
+[2023-04-28T04:43:39.991233][CONTROLLER][INFO]Experiment was 'ExperimentStatus.RUNNING', is 'ExperimentStatus.FAILED'.
