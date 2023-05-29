@@ -16,47 +16,24 @@ allowSelfSignedHttps(True) # this line is needed if you use self-signed certific
 # More information can be found here:
 # https://docs.microsoft.com/azure/machine-learning/how-to-deploy-advanced-entry-script
 data =  {
-  "Inputs": {
-    "data": [
-      {
-        "age": 17,
-            "campaign": 1,
-            "cons.conf.idx": -46.2,
-            "cons.price.idx": 92.893,
-            "contact": "cellular",
-            "day_of_week": "mon",
-            "default": "no",
-            "duration": 971,
-            "education": "university.degree",
-            "emp.var.rate": -1.8,
-            "euribor3m": 1.299,
-            "housing": "yes",
-            "job": "blue-collar",
-            "loan": "yes",
-            "marital": "married",
-            "month": "may",
-            "nr.employed": 5099.1,
-            "pdays": 999,
-            "poutcome": "failure",
-            "previous": 1
-      }
-    ]
-  },
-  "GlobalParameters": {
-    "method": "predict"
-  }
+  "data": [
+    {
+        "cylinders": 6,
+        "displacement": 320.0,
+        "horsepower": 160,
+        "weight": 3000,
+        "acceleration": 15.0,
+        "model year": 70
+    }
+  ]
 }
 
 body = str.encode(json.dumps(data))
 
-url = 'http://a64e9891-f0d2-402d-a754-817290a47997.westeurope.azurecontainer.io/score'
-# Replace this with the primary/secondary key or AMLToken for the endpoint
-api_key = '8HHcTRVmq1naqIo0W1kNge9o1XSbkqO2'
-if not api_key:
-    raise Exception("A key should be provided to invoke the endpoint")
+url = 'http://c1ca06ef-e190-4ae8-93e9-d04b065eec95.westeurope.azurecontainer.io/score'
 
 
-headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+headers = {'Content-Type':'application/json'}
 
 req = urllib.request.Request(url, body, headers)
 
