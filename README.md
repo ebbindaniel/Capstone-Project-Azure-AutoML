@@ -1,5 +1,5 @@
 
-# Udacity Azure Machine Learning Engineer Capstone project : MPG PREDICTION USING AZURE ML
+# Azure Machine Learning Engineer Capstone project : MPG PREDICTION USING AZURE ML
 
 This project is aimed to train various models using Azure's Auto ML and hyperdrive features and find the best model to be able to be deployed as a web service with REST API having active endpoints capable of predicting the miles per gallon for any vehicle given the details such as the Model Year, Number of cylinders, horsepower ,displacement,etc 
 
