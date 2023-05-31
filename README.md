@@ -43,7 +43,7 @@ With this dataset I will be training multiple models for be able to predict the 
 
 ### Access
 
-I will be manually uploading the dataset to Azure ML studio from the data section as a tabular dataset in the provided blob storage via the account which is able to be accessed via the UI or the azure sdk given the workspace and resource details. 
+I will be manually uploading the dataset to Azure ML studio from the data section as a tabular dataset in the provided blob storage associated to the azure account which is able to be accessed via the UI or the azure sdk given the workspace and resource details. 
 
 ![data1](Screenshots/dataset.png?raw=true "data1")
 
