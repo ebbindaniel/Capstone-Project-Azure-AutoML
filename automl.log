@@ -1,0 +1,219 @@
+2023-05-31 01:46:59.152 - INFO - 42820 - azureml.train.automl._local_managed_utils.is_docker_installed:354 - Docker is installed with Docker version 20.10.23, build 7155243
+.
+2023-05-31 01:46:59.155 - INFO - 42820 - azureml.train.automl.automlconfig._start_execution:230 - Submitting remote.
+2023-05-31 02:04:29.597 - INFO - 42820 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-05-31 02:04:29.658 - INFO - 42820 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-05-31 02:04:29.699 - INFO - 42820 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2023-05-31 02:04:32.071 - INFO - 42820 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetChildren, HowEnded=Success, Duration=2371.81[ms]
+2023-05-31 02:04:32.949 - INFO - 42820 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Success, Duration=3291.08[ms]
+2023-05-31 02:04:32.949 - INFO - 42820 - azureml.train.automl._model_download_utilities._log_activity:55 - ActivityStarted: DownloadModel
+2023-05-31 02:04:41.803 - WARNING - 42820 - azureml.training.tabular.models._timeseries._prophet_model.<module>:32 - Unable to import fbprophet.
+2023-05-31 02:04:44.141 - INFO - 42820 - azureml.automl.runtime.featurization.data_transformer.__init__:190 - Feature sweeping enabled: False
+2023-05-31 02:04:44.144 - INFO - 42820 - azureml.automl.runtime.featurization.data_transformer.__init__:191 - Feature sweeping timeout: 86400
+2023-05-31 02:04:44.754 - CRITICAL - 42820 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: TypeError
+Message: Descriptors cannot not be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates
+Traceback:
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "data_transformer.py", line 998, in __setstate__
+    new_data_transformer = DataTransformer()
+  File "data_transformer.py", line 198, in __init__
+    from azureml.automl.runtime.sweeping.meta_sweeper import MetaSweeper
+  File "meta_sweeper.py", line 36, in <module>
+    from ..scoring import Scorers, AbstractScorer
+  File "__init__.py", line 5, in <module>
+    from .abstract_scorer import AbstractScorer
+  File "abstract_scorer.py", line 12, in <module>
+    from azureml.automl.runtime.shared.metrics import is_better
+  File "metrics.py", line 18, in <module>
+    from azureml.automl.runtime import _ml_engine
+  File "__init__.py", line 6, in <module>
+    from .ml_engine import convert_to_onnx, featurize, validate, run_ensemble_selection
+  File "ml_engine.py", line 44, in <module>
+    from skl2onnx.proto import onnx_proto  # noqa: E402
+  File "__init__.py", line 18, in <module>
+    from .convert import convert_sklearn # noqa
+  File "convert.py", line 8, in <module>
+    from .proto import get_opset_number_from_onnx
+  File "__init__.py", line 11, in <module>
+    import onnx
+  File "__init__.py", line 6, in <module>
+    from onnx.external_data_helper import load_external_data_for_model, write_external_data_tensors, convert_model_to_external_data
+  File "external_data_helper.py", line 9, in <module>
+    from .onnx_pb import TensorProto, ModelProto, AttributeProto, GraphProto
+  File "onnx_pb.py", line 4, in <module>
+    from .onnx_ml_pb2 import *  # noqa
+  File "onnx_ml_pb2.py", line 37, in <module>
+    create_key=_descriptor._internal_create_key),
+  File "descriptor.py", line 796, in __new__
+    _message.Message._CheckCalledFromGeneratedFile()
+
+ExceptionTarget: Unspecified
+2023-05-31 02:09:23.741 - WARNING - 42820 - azureml.train.automl._model_download_utilities._get_error_details:265 - Failed to parse error details while logging traceback from exception of type AzureMLException:
+	Message: Download of file failed with error: [Errno 13] Permission denied: 'C:\\Users\\ebbin\\AppData\\Local\\Temp\\tmpnl3ex4m6'
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Download of file failed with error: [Errno 13] Permission denied: 'C:\\\\Users\\\\ebbin\\\\AppData\\\\Local\\\\Temp\\\\tmpnl3ex4m6'",
+        "inner_error": {
+            "code": "ConnectionFailure"
+        }
+    }
+}
+2023-05-31 02:09:23.809 - CRITICAL - 42820 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: AzureMLException
+Message: AzureMLException:
+	Message: Download of file failed with error: [Errno 13] Permission denied: 'C:\\Users\\ebbin\\AppData\\Local\\Temp\\tmpnl3ex4m6'
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "code": "UserError",
+        "message": "Download of file failed with error: [Errno 13] Permission denied: 'C:\\\\Users\\\\ebbin\\\\AppData\\\\Local\\\\Temp\\\\tmpnl3ex4m6'",
+        "inner_error": {
+            "code": "ConnectionFailure"
+        }
+    }
+}
+Traceback:
+  File "_model_download_utilities.py", line 104, in _download_automl_model
+    run.download_file(automl_shared_constants.DEPENDENCIES_PATH, fp.name)
+  File "run.py", line 53, in wrapped
+    return func(self, *args, **kwargs)
+  File "run.py", line 2146, in download_file
+    _validate_checksum)
+  File "artifacts_client.py", line 269, in download_artifact
+    _validate_check_sum=_validate_checksum)
+  File "clientbase.py", line 375, in _execute_func
+    DEFAULT_SHORT_BACKOFF, DEFAULT_RETRIES, module_logger, func, _noop_reset, *args, **kwargs)
+  File "clientbase.py", line 367, in _execute_func_internal
+    left_retry = cls._handle_retry(back_off, left_retry, total_retry, error, logger, func)
+  File "clientbase.py", line 433, in _handle_retry
+    raise error
+  File "clientbase.py", line 358, in _execute_func_internal
+    response = func(*args, **kwargs)
+  File "file_utils.py", line 244, in download_file
+    return _retry(exec_func, max_retries=max_retries, fail_on_exceptions=fail_on_exceptions)
+  File "file_utils.py", line 493, in _retry
+    raise AzureMLException._with_error(azureml_error)
+
+ExceptionTarget: Unspecified
+2023-05-31 02:09:23.831 - CRITICAL - 42820 - azureml.train.automl._model_download_utilities.log_traceback:227 - Type: Unclassified
+Class: TypeError
+Message: Descriptors cannot not be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "data_transformer.py", line 998, in __setstate__
+    new_data_transformer = DataTransformer()
+  File "data_transformer.py", line 198, in __init__
+    from azureml.automl.runtime.sweeping.meta_sweeper import MetaSweeper
+  File "meta_sweeper.py", line 36, in <module>
+    from ..scoring import Scorers, AbstractScorer
+  File "__init__.py", line 5, in <module>
+    from .abstract_scorer import AbstractScorer
+  File "abstract_scorer.py", line 12, in <module>
+    from azureml.automl.runtime.shared.metrics import is_better
+  File "metrics.py", line 18, in <module>
+    from azureml.automl.runtime import _ml_engine
+  File "__init__.py", line 6, in <module>
+    from .ml_engine import convert_to_onnx, featurize, validate, run_ensemble_selection
+  File "ml_engine.py", line 44, in <module>
+    from skl2onnx.proto import onnx_proto  # noqa: E402
+  File "__init__.py", line 18, in <module>
+    from .convert import convert_sklearn # noqa
+  File "convert.py", line 8, in <module>
+    from .proto import get_opset_number_from_onnx
+  File "__init__.py", line 11, in <module>
+    import onnx
+  File "__init__.py", line 6, in <module>
+    from onnx.external_data_helper import load_external_data_for_model, write_external_data_tensors, convert_model_to_external_data
+  File "external_data_helper.py", line 9, in <module>
+    from .onnx_pb import TensorProto, ModelProto, AttributeProto, GraphProto
+  File "onnx_pb.py", line 4, in <module>
+    from .onnx_ml_pb2 import *  # noqa
+  File "onnx_ml_pb2.py", line 37, in <module>
+    create_key=_descriptor._internal_create_key),
+  File "descriptor.py", line 796, in __new__
+    _message.Message._CheckCalledFromGeneratedFile()
+
+ExceptionTarget: Unspecified
+2023-05-31 02:09:23.833 - INFO - 42820 - azureml.train.automl._model_download_utilities._log_activity:93 - ActivityCompleted: Activity=DownloadModel, HowEnded=Failure, Duration=290883.25[ms]
+2023-05-31 02:09:23.865 - CRITICAL - 42820 - azureml.train.automl.run.log_traceback:227 - Type: Unclassified
+Class: TypeError
+Message: Descriptors cannot not be created directly.
+If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc >= 3.19.0.
+If you cannot immediately regenerate your protos, some other possible workarounds are:
+ 1. Downgrade the protobuf package to 3.20.x or lower.
+ 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).
+
+More information: https://developers.google.com/protocol-buffers/docs/news/2022-05-06#python-updates
+Traceback:
+  File "telemetry_activity_logger.py", line 58, in _log_activity
+    yield
+  File "run.py", line 718, in get_output
+    fitted_model = _download_automl_model(curr_run, model_name)
+  File "_model_download_utilities.py", line 80, in _download_automl_model
+    model = _load_automl_model(model_path, suffix)
+  File "_model_download_utilities.py", line 172, in _load_automl_model
+    fitted_model = pickle.load(model_file)  # type: Optional[Any]
+  File "data_transformer.py", line 998, in __setstate__
+    new_data_transformer = DataTransformer()
+  File "data_transformer.py", line 198, in __init__
+    from azureml.automl.runtime.sweeping.meta_sweeper import MetaSweeper
+  File "meta_sweeper.py", line 36, in <module>
+    from ..scoring import Scorers, AbstractScorer
+  File "__init__.py", line 5, in <module>
+    from .abstract_scorer import AbstractScorer
+  File "abstract_scorer.py", line 12, in <module>
+    from azureml.automl.runtime.shared.metrics import is_better
+  File "metrics.py", line 18, in <module>
+    from azureml.automl.runtime import _ml_engine
+  File "__init__.py", line 6, in <module>
+    from .ml_engine import convert_to_onnx, featurize, validate, run_ensemble_selection
+  File "ml_engine.py", line 44, in <module>
+    from skl2onnx.proto import onnx_proto  # noqa: E402
+  File "__init__.py", line 18, in <module>
+    from .convert import convert_sklearn # noqa
+  File "convert.py", line 8, in <module>
+    from .proto import get_opset_number_from_onnx
+  File "__init__.py", line 11, in <module>
+    import onnx
+  File "__init__.py", line 6, in <module>
+    from onnx.external_data_helper import load_external_data_for_model, write_external_data_tensors, convert_model_to_external_data
+  File "external_data_helper.py", line 9, in <module>
+    from .onnx_pb import TensorProto, ModelProto, AttributeProto, GraphProto
+  File "onnx_pb.py", line 4, in <module>
+    from .onnx_ml_pb2 import *  # noqa
+  File "onnx_ml_pb2.py", line 37, in <module>
+    create_key=_descriptor._internal_create_key),
+  File "descriptor.py", line 796, in __new__
+    _message.Message._CheckCalledFromGeneratedFile()
+
+ExceptionTarget: Unspecified
+2023-05-31 02:09:23.866 - INFO - 42820 - azureml.train.automl.run._log_activity:93 - ActivityCompleted: Activity=GetOutput, HowEnded=Failure, Duration=294269.47[ms]
+2023-05-31 11:03:22.929 - INFO - 42820 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-05-31 11:03:22.959 - INFO - 42820 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetOutput
+2023-05-31 11:03:22.988 - INFO - 42820 - azureml.train.automl.run._log_activity:55 - ActivityStarted: GetChildren
+2023-05-31 11:44:06.123 - INFO - 21056 - azureml.train.automl._local_managed_utils.is_docker_installed:354 - Docker is installed with Docker version 20.10.23, build 7155243
+.
+2023-05-31 11:44:06.125 - INFO - 21056 - azureml.train.automl.automlconfig._start_execution:230 - Submitting remote.

@@ -45,11 +45,20 @@ With this dataset I will be training multiple models for be able to predict the 
 
 I will be manually uploading the dataset to Azure ML studio from the data section as a tabular dataset in the provided blob storage via the account which is able to be accessed via the UI or the azure sdk given the workspace and resource details. 
 
----- add screenshot!
+![data1](screenshots/dataset.png?raw=true "data1")
+
+![data2](screenshots/dataset1.png?raw=true "data2")
+
+The data can be consumed via the SDK as shown as:
+
+![data3](screenshots/dataset2.png?raw=true "data3")
+
 
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
+
+
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
