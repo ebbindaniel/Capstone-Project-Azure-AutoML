@@ -217,3 +217,6 @@ ExceptionTarget: Unspecified
 2023-05-31 11:44:06.123 - INFO - 21056 - azureml.train.automl._local_managed_utils.is_docker_installed:354 - Docker is installed with Docker version 20.10.23, build 7155243
 .
 2023-05-31 11:44:06.125 - INFO - 21056 - azureml.train.automl.automlconfig._start_execution:230 - Submitting remote.
+2023-05-31 12:09:49.234 - INFO - 27124 - azureml.train.automl._local_managed_utils.is_docker_installed:354 - Docker is installed with Docker version 20.10.23, build 7155243
+.
+2023-05-31 12:09:49.237 - INFO - 27124 - azureml.train.automl.automlconfig._start_execution:230 - Submitting remote.

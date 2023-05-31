@@ -56,7 +56,53 @@ The data can be consumed via the SDK as shown as:
 
 
 ## Automated ML
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
+
+The following were the configuration for the AutoML run:
+
+```
+# automl settings:
+automl_settings = {
+    "n_cross_validations": 3,
+    "primary_metric": "r2_score",
+    "enable_early_stopping": True,
+    "max_concurrent_iterations": 5,
+    "experiment_timeout_minutes": 30
+   
+}
+
+# automl config parameters:
+automl_config = AutoMLConfig(
+    task="regression",
+    compute_target=compute_target,
+    training_data=train_data,
+    label_column_name=label,
+    **automl_settings,
+)
+```
+_experiment timeout minutes=30_
+
+The default experiment was set to 30 mins. 
+
+_task='regression'_
+
+This defines the experiment type which in this case is Regression.
+
+_primary metric='r2_score'_
+
+r2_score was chosen as the primary metric for this regression problem.
+
+_training data and label column name_ 
+
+Here the Main dataset was was provided as training data and the label column was the Predictor column  - mpg (miles per gallon)
+
+
+_n_cross_validations=3_
+
+This parameter sets how many cross validations to perform, based on the same number of folds (number of subsets). In this case i choose to have 3 Cross Validation subsets to reduce any overfitting as the metrics would be the average of 3 subset outputs generated. 
+
+_enable_early_stopping = Enabled_
+
+Early stopping is enabled to save compute costs if performance does not get better with each iteration. 
 
 
 
