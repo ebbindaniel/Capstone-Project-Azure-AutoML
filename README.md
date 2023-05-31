@@ -1,17 +1,36 @@
 
 # Azure Machine Learning Engineer Capstone Project - MPG PREDICTION USING AZURE ML
 
-This project is aimed to train various models using Azure's Auto ML and hyperdrive features and find the best model to be able to be deployed as a web service with REST API having active endpoints capable of predicting the miles per gallon for any vehicle given the details such as the Model Year, Number of cylinders, horsepower ,displacement,etc 
+This project is aimed to train various models using Azure's Auto ML and Hyperdrive features and find the best model to be able to be deployed as a web service with REST API having active endpoints capable of predicting the miles per gallon for any vehicle given the details such as the Model Year, Number of cylinders, horsepower ,displacement,etc 
 
-The dataset is an external dataset from kaggle which can be found <a href='https://www.kaggle.com/datasets/uciml/autompg-dataset'>here </a> 
+
 
 ## Project Set Up and Installation
-
 
 ## Dataset
 
 ### Overview
-*TODO*: Explain about the data you are using and where you got it from.
+
+**Context**
+The data is technical spec of cars. The dataset is an external dataset from kaggle which can be found <a href='https://www.kaggle.com/datasets/uciml/autompg-dataset'>here </a> 
+
+**Sources:**
+(a) Origin: This dataset was taken from the StatLib library which is
+maintained at Carnegie Mellon University. The dataset was
+used in the 1983 American Statistical Association Exposition.
+
+**Number of Attributes:** 7 
+
+**Attribute Information:**
+
+mpg: continuous
+cylinders: multi-valued discrete
+displacement: continuous
+horsepower: continuous
+weight: continuous
+acceleration: continuous
+model year: multi-valued discrete
+
 
 ### Task
 *TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
