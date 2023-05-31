@@ -12,24 +12,27 @@ This project is aimed to train various models using Azure's Auto ML and Hyperdri
 ### Overview
 
 **Context**
+
 The data is technical spec of cars. The dataset is an external dataset from kaggle which can be found <a href='https://www.kaggle.com/datasets/uciml/autompg-dataset'>here </a> 
 
 **Sources:**
+
 (a) Origin: This dataset was taken from the StatLib library which is
 maintained at Carnegie Mellon University. The dataset was
 used in the 1983 American Statistical Association Exposition.
 
 **Number of Attributes:** 7 
 
+
 **Attribute Information:**
 
-mpg: continuous
-cylinders: multi-valued discrete
-displacement: continuous
-horsepower: continuous
-weight: continuous
-acceleration: continuous
-model year: multi-valued discrete
+- mpg: continuous
+- cylinders: multi-valued discrete
+- displacement: continuous
+- horsepower: continuous
+- weight: continuous
+- acceleration: continuous
+- model year: multi-valued discrete
 
 
 ### Task
