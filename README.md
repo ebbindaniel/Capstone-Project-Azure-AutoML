@@ -1,5 +1,5 @@
 
-# Azure Machine Learning Engineer Capstone Project - MPG PREDICTION USING AZURE ML
+# Azure Machine Learning Engineer Capstone Project - MPG Prediction Using Azure ML
 
 This project is aimed to train various models using Azure's Auto ML and Hyperdrive features and find the best model to be able to be deployed as a web service with REST API having active endpoints capable of predicting the miles per gallon for any vehicle given the details such as the Model Year, Number of cylinders, horsepower ,displacement,etc 
 
@@ -36,10 +36,17 @@ used in the 1983 American Statistical Association Exposition.
 
 
 ### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
+
+
+With this dataset I will be training multiple models for be able to predict the miles per gallons of any cars given the various technical details such as cylinders,displacement,horsepower,weight, acceleration,model year,etc are provided. 
+
 
 ### Access
-*TODO*: Explain how you are accessing the data in your workspace.
+
+I will be manually uploading the dataset to Azure ML studio from the data section as a tabular dataset in the provided blob storage via the account which is able to be accessed via the UI or the azure sdk given the workspace and resource details. 
+
+---- add screenshot!
+
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
