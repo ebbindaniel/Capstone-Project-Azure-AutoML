@@ -287,7 +287,6 @@ The endpoints are tested using the REST API and a sample input data to obtain a 
 
 ![hd11](Screenshots/model_endpoint1.png?raw=true "hd11")
 
-![hd11](Screenshots/model_endpoint2.png?raw=true "hd11")
 
 
 ## Screen Recording
