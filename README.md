@@ -294,3 +294,10 @@ The endpoints are tested using the REST API and a sample input data to obtain a 
 The Link to the Screen Recording can be found <a href='https://youtu.be/aCott8YG-eQ'>here </a> 
 
 
+## Future Improvements
+
+The project can be further improved by:
+
+ - Improving performace by using feature selection techniques. 
+ - Using other scoring metrics to evalute model performance
+ - Evaluating Inference time (Time to send request and receive an output) for the deployed model and improve efficiency 
