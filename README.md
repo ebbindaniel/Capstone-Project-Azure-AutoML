@@ -118,42 +118,51 @@ The results for the best model is as follows:
 
 The best model was the Voting Ensamble model with the r2 score of 0.8582
 
-![aml1](Screenshots/automl_main?raw=true "aml1")
+
+![aml1](Screenshots/automl_main.png?raw=true "aml1")
 
 **The best model details are:**
 
 -voting ensamble details
 
-![aml2](Screenshots/automl_bestrun?raw=true "aml2")
+
+![aml2](Screenshots/automl_bestrun.png?raw=true "aml2")
 
 -ensamble details - In this case Standard Scalar Wrapper, Light GBM Ensamble was used
 
-![aml3](Screenshots/automl_bestmodel_ensemble?raw=true "aml3")
+
+![aml3](Screenshots/automl_bestmodel_ensemble.png?raw=true "aml3")
 
 
 **Run Details**
 
-![aml4](Screenshots/automl_run_details?raw=true "aml4")
+
+![aml4](Screenshots/automl_run_details.png?raw=true "aml4")
 
 **R2_Score Chart - Run Details**
 
-![aml5](Screenshots/automl_r2_score?raw=true "aml5")
+
+![aml5](Screenshots/automl_r2_score.png?raw=true "aml5")
 
 **AutoML Jobs**
 
-![aml6](Screenshots/automl_job?raw=true "aml6")
+
+![aml6](Screenshots/automl_job.png?raw=true "aml6")
 
 
 **AutoML Experiments**
 
-![aml7](Screenshots/automl_experiment?raw=true "aml7")
+
+![aml7](Screenshots/automl_experiment.png?raw=true "aml7")
 
 
 **Registered Model**
 
+
 The Best Model was Registered as **AutoML_best_run**
 
-![aml8](Screenshots/automl_registered_model?raw=true "aml8")
+
+![aml8](Screenshots/automl_registered_model.png?raw=true "aml8")
 
 **Performance of different Models**
 
@@ -164,6 +173,7 @@ There could be other factors such as variance and corelation in the dataset whic
 **Improvement**
 
 I could have further improved it by testing various values for cross validations and also using feature selection to improve the performance.
+
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
