@@ -176,15 +176,14 @@ I could have further improved it by testing various values for cross validations
 
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
 For the Hyperdrive Experiment i choose a **Random Forest Regressor Model**. The model is a simple yet effective model with good prediction results for a regression problem. 
 
 Various hyperparameters affect the model performace so the various hyperparameters used are:
 
-- n_estimators: number of trees in the foreset
-- max_depth: max number of levels in each decision tree
-- bootstrap: method for sampling data points (with or without replacement)
+- **n_estimators:** number of trees in the foreset
+- **max_depth:** max number of levels in each decision tree
+- **bootstrap:** method for sampling data points (with or without replacement)
 
 The various ranges used for parameter sampling are:
 
@@ -244,9 +243,6 @@ The primary metric used here is **R2_Score**. The models are evaluated based on 
 
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
-
-**Hyperdrive Best Run**
 
 
 | Hyperdrive Best Run Model | |
@@ -257,6 +253,8 @@ The primary metric used here is **R2_Score**. The models are evaluated based on 
 | method for sampling data points (with or without replacement) | True |
 | R2_Score | 0.9288 |
 | Algortithm | Random Forest Regressor |
+
+**Hyperdrive Best Run**
 
 
 ![hd7](Screenshots/hyperdrive_best_run.png?raw=true "hd7")
@@ -272,13 +270,28 @@ The primary metric used here is **R2_Score**. The models are evaluated based on 
 The Hyperdrive model could have been improved be feature selection techniques and by using cross validation techniques. Also a parallel Ensamble model could add to the model performance. 
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+
+Based on both Auto ML and Hyperdrive models the best Hyperdive Model delivered a better R2_Score of 0.9288 and was used for model deployment.
+
+The registered Hyperdrive model was deployed as a **ACI webservice**. The inference config was used to pass an entry script **score.py** which has the model init details to find the directory of the model and pass a input and output schema in the data section which is later used in consume section of the deployed webservice using REST API. 
+
+Once the deployment was success the status is **healthy** with a successful deployment. 
+
+![hd9](Screenshots/model_deploy_success.png?raw=true "hd9")
+
+
+![hd10](Screenshots/model_deploy_active.png?raw=true "hd10")
+
+
+The endpoints are tested using the REST API and a sample input data to obtain a predicted value.
+
+![hd11](Screenshots/model_endpoint1.png?raw=true "hd11")
+
+![hd11](Screenshots/model_endpoint2.png?raw=true "hd11")
+
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+The Link to the Screen Recording can be found <a href='https://youtu.be/aCott8YG-eQ'>here </a> 
+
+
