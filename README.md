@@ -107,9 +107,63 @@ Early stopping is enabled to save compute costs if performance does not get bett
 
 
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+The results for the best model is as follows:
+
+| AutoML Best Run Model | |
+| :---: | :---: |
+| id | AutoML_627bbbc0-c27d-4488-b9ed-663a5abaa043 |
+| R2_Score | 0.8582 |
+| Algortithm | VotingEnsemble |
+
+The best model was the Voting Ensamble model with the r2 score of 0.8582
+
+![aml1](Screenshots/automl_main?raw=true "aml1")
+
+**The best model details are:**
+
+-voting ensamble details
+
+![aml2](Screenshots/automl_bestrun?raw=true "aml2")
+
+-ensamble details - In this case Standard Scalar Wrapper, Light GBM Ensamble was used
+
+![aml3](Screenshots/automl_bestmodel_ensemble?raw=true "aml3")
+
+
+**Run Details**
+
+![aml4](Screenshots/automl_run_details?raw=true "aml4")
+
+**R2_Score Chart - Run Details**
+
+![aml5](Screenshots/automl_r2_score?raw=true "aml5")
+
+**AutoML Jobs**
+
+![aml6](Screenshots/automl_job?raw=true "aml6")
+
+
+**AutoML Experiments**
+
+![aml7](Screenshots/automl_experiment?raw=true "aml7")
+
+
+**Registered Model**
+
+The Best Model was Registered as **AutoML_best_run**
+
+![aml8](Screenshots/automl_registered_model?raw=true "aml8")
+
+**Performance of different Models**
+
+In our case the Voting Ensamble Model performed the best compared to other models as it had a better R2 Score as the model fit the data better than other models. There could be varaiety of factors that can affect performance such as batch size, learning rate, dropout,regularization methods, etc which can effect the performace.
+
+There could be other factors such as variance and corelation in the dataset which effects some models but other models have weights and techniques to get by it delivering better performance. 
+
+**Improvement**
+
+I could have further improved it by testing various values for cross validations and also using feature selection to improve the performance.
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
