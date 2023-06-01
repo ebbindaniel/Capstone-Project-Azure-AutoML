@@ -46,8 +46,8 @@ def main():
     
     model = RandomForestRegressor(n_estimators = args.n_estimators,max_depth = args.max_depth,bootstrap = args.bootstrap ).fit(x_train, y_train)
 
-    Accuracy = model.score(x_test, y_test)
-    run.log("Accuracy", float(Accuracy))
+    r2_score = model.score(x_test, y_test)
+    run.log("r2_score", float(r2_score))
 
     #save the model to folder outputs
     os.makedirs('outputs', exist_ok=True)

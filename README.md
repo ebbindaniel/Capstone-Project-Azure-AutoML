@@ -178,11 +178,98 @@ I could have further improved it by testing various values for cross validations
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
+For the Hyperdrive Experiment i choose a **Random Forest Regressor Model**. The model is a simple yet effective model with good prediction results for a regression problem. 
+
+Various hyperparameters affect the model performace so the various hyperparameters used are:
+
+- n_estimators: number of trees in the foreset
+- max_depth: max number of levels in each decision tree
+- bootstrap: method for sampling data points (with or without replacement)
+
+The various ranges used for parameter sampling are:
+
+```
+ps = RandomParameterSampling(
+    {
+        '--n_estimators' : choice(200, 300, 400),
+        '--max_depth': choice(10, 20, 30, 40, 50),
+        '--bootstrap': choice(1,0)
+    }
+)
+
+```
+The Policy used for early termination is the Bandit Policy which saves compute costs and time. 
+
+```
+# Bandit policy for early termination
+policy = BanditPolicy(evaluation_interval=2, slack_factor=0.1)
+
+```
+The primary metric used here is **R2_Score**. The models are evaluated based on the highest R2_score. 
+
+
+**Run_Details**
+
+
+![hd1](Screenshots/hyperdrive_rundetails1.png?raw=true "hd1")
+
+**R2_Score Run Details**
+
+
+![hd2](Screenshots/hyperdrive_r2_score.png?raw=true "hd2")
+
+
+![hd3](Screenshots/hyperdrive_r2_score2.png?raw=true "hd3")
+
+
+**Hyperdrive Experiment**
+
+
+![hd4](Screenshots/hyperdrive_r2_experiment.png?raw=true "hd4")
+
+**Hyperdrive Jobs**
+
+
+![hd5](Screenshots/hyperdrive_r2_jobs.png?raw=true "hd5")
+
+
+**Main Hyperdrive Run with parameters**
+
+
+![hd6](Screenshots/hyperdrive_main.png?raw=true "hd6")
+
+
+
+
+
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+**Hyperdrive Best Run**
+
+
+| Hyperdrive Best Run Model | |
+| :---: | :---: |
+| id | HD_2743343d-e249-482d-b015-c37c75482dcf_11 |
+| number of trees in the foreset | 300 |
+| max number of levels in each decision tree | 20 |
+| method for sampling data points (with or without replacement) | True |
+| R2_Score | 0.9288 |
+| Algortithm | Random Forest Regressor |
+
+
+![hd7](Screenshots/hyperdrive_best_run.png?raw=true "hd7")
+
+
+**Hyperdrive Registered Model**
+
+![hd8](Screenshots/hyperdrive_registered_model.png?raw=true "hd8")
+
+
+**Improvement**
+
+The Hyperdrive model could have been improved be feature selection techniques and by using cross validation techniques. Also a parallel Ensamble model could add to the model performance. 
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
